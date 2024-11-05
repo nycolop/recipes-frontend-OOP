@@ -3,7 +3,9 @@ import RecipesManager from './RecipesManager.js';
 
 export default class DataManager {
     constructor() {
-        this.recipes = new RecipesManager();
+        this.datas = [
+            new RecipesManager()
+        ];
     }
 
     static getInstance() {
@@ -12,5 +14,11 @@ export default class DataManager {
         }
 
         return this.instance;
+    }
+
+    render() {
+        for (const data of this.datas) {
+            data.render();
+        }
     }
 }

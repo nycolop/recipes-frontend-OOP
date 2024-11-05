@@ -5,7 +5,7 @@ class Main {
     static start() {
         const dataManager = DataManager.getInstance();
 
-        dataManager.recipes.render();
+        dataManager.render();
     }
 }
 
